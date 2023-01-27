@@ -50,6 +50,7 @@ npm start
 (You won't be able to see reCAPTCHA on it though, since localhost:1234 isn't allowed. You'll have to see the live demo.)
 
 ```sh
+# run yarn dev beforehand to generate the /dist folder with transpiled paths, etc.
 yarn deploy
 ```
 
