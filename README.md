@@ -1,45 +1,58 @@
-# Learning template [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/hchiam/learning-template/blob/main/LICENSE)
+# Learning Google reCAPTCHA
 
 Just one of the things I'm learning. https://github.com/hchiam/learning
 
-(To use this template fast with [`gh` CLI](https://github.com/hchiam/learning-gh), you can run [`gh repo create --template learning-template learning-...`](https://cli.github.com/manual/gh_repo_create) or [set up a custom shortcut CLI command](https://github.com/hchiam/learning-bash-scripts/blob/main/gh-cli-create-learning-repo-from-template.sh).)
+Register a new site and get `your_site_key` at https://www.google.com/recaptcha/admin/create/
 
-(To create a convenience script repo, use this template instead: https://github.com/hchiam/convenience)
+Then view stats or edit settings at https://www.google.com/recaptcha/admin/
 
-(To create a website fast, use a code generator like [`create-next-app`](https://github.com/hchiam/learning-nextjs), [`sapper`](https://github.com/hchiam/learning-sapper), a [svelte template](https://github.com/sveltejs/template), [`yo`](https://yeoman.io/generators), or my [project-template](https://github.com/hchiam/project-template))
+I think I personally prefer "Invisible" until-needed reCAPTCHA v2 auto-bind setup:
+https://developers.google.com/recaptcha/docs/invisible#auto_render
 
-<!-- Add reference link(s) here -->
-
-## From scratch
-
-Using [`yarn`](https://github.com/hchiam/learning-yarn):
-
-```bash
-yarn add
+```html
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+      }
+    </script>
+  </head>
+  <body>
+    <form id="demo-form" action="?" method="POST">
+      <button
+        class="g-recaptcha"
+        data-sitekey="your_site_key"
+        data-callback="onSubmit"
+      >
+        Submit
+      </button>
+      <br />
+    </form>
+  </body>
+</html>
 ```
 
-Or with `npm`:
+## to run the minimal example in this repo
 
-```bash
-npm install
+```sh
+yarn dev
 ```
 
-And then:
+or
 
-```bash
-
+```sh
+npm start
 ```
 
-## Starting by testing out this repo <!-- Replace "template"s and "# and then ..."s in this section -->
+## live demo
 
-Using [`yarn`](https://github.com/hchiam/learning-yarn): (triple-click to select all)
+This can show reCAPTCHA:
 
-```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && yarn; # and then ...
-```
+https://recaptcha-test.surge.sh/
 
-Or with `npm`: (triple-click to select all)
+`your_site_key` can be public, and since I've specified the domain to be **recaptcha-test.surge.sh**, it won't work on other domains, like:
 
-```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && npm install; # and then ...
-```
+https://recaptcha-test-non.surge.sh/
