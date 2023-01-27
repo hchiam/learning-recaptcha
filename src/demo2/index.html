@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>reCAPTCHA demo: Simple page</title>
+    <title>reCAPTCHA demo 2</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       function onSubmit(token) {
@@ -14,6 +14,8 @@
   </head>
   <body>
     <form id="demo-form" action="?" method="POST">
+      <input type="text" aria-label="username" />
+      <input type="password" aria-label="password" />
       <button
         class="g-recaptcha"
         data-sitekey="6LdR6C0kAAAAAK73qEd6AMnSOAuyK4eXW7BaVAjt"
@@ -24,6 +26,6 @@
       <br />
     </form>
     <br />
-    <a href="/src/demo2/index.html">/demo2</a>
+    <a href="/src/index.html">home</a>
   </body>
 </html>

@@ -7,8 +7,7 @@
     "test": "jest --bail --findRelatedTests **/*.js",
     "lint": "prettier --write *.{js,css,html,scss,json,md,ts,tsx}",
     "es-check": "es-check es5 './**/*.js' --not=node_modules",
-    "deploy": "surge src https://recaptcha-test.surge.sh/",
-    "deploy-non": "surge src https://recaptcha-test-non.surge.sh/"
+    "deploy": "surge dist https://recaptcha-test.surge.sh/; surge dist https://recaptcha-test-non.surge.sh/"
   },
   "dependencies": {},
   "devDependencies": {

@@ -47,11 +47,19 @@ or
 npm start
 ```
 
+(You won't be able to see reCAPTCHA on it though, since localhost:1234 isn't allowed. You'll have to see the live demo.)
+
+```sh
+yarn deploy
+```
+
 ## live demo
 
 This can show reCAPTCHA:
 
 https://recaptcha-test.surge.sh/
+
+https://recaptcha-test.surge.sh/demo2/
 
 `your_site_key` can be public, and since I've specified the domain to be **recaptcha-test.surge.sh**, it won't work on other domains, like:
 
