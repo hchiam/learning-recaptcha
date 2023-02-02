@@ -35,6 +35,8 @@ https://developers.google.com/recaptcha/docs/invisible#auto_render
 </html>
 ```
 
+Note that for proper usage on a real site you should also verify the reCAPTCHA response: https://developers.google.com/recaptcha/docs/verify#api-request
+
 ## to run the minimal example in this repo
 
 ```sh
