@@ -71,3 +71,9 @@ https://recaptcha-test-non.surge.sh/
 ## if you can't trigger the invisible reCAPTCHA to test you
 
 To try to manually trigger the reCAPTCHA from the user side, try opening the browser in incognito (and raising the difficulty in the admin dashboard).
+
+## more things to try
+
+test keys for automated testing: https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do
+
+https://developers.google.com/recaptcha/docs/verify#api-request
