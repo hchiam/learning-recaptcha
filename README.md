@@ -67,3 +67,7 @@ https://recaptcha-test.surge.sh/demo2/
 `your_site_key` can be public, and since I've specified the domain to be **recaptcha-test.surge.sh**, it won't work on other domains, like:
 
 https://recaptcha-test-non.surge.sh/
+
+## if you can't trigger the invisible reCAPTCHA to test you
+
+To try to manually trigger the reCAPTCHA from the user side, try opening the browser in incognito (and raising the difficulty in the admin dashboard).
