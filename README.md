@@ -37,6 +37,14 @@ https://developers.google.com/recaptcha/docs/invisible#auto_render
 
 Note that for proper usage on a real site you should also verify the reCAPTCHA response: https://developers.google.com/recaptcha/docs/verify#api-request
 
+```js
+token = grecaptcha.getResponse(opt_widget_id); // or two other ways mentioned in https://developers.google.com/recaptcha/docs/verify
+```
+
+Then send token in POST request to https://www.google.com/recaptcha/api/siteverify
+
+Then response JSON has `{success:true|false,...}`
+
 ## to run the minimal example in this repo
 
 ```sh
